@@ -1,0 +1,209 @@
+/* From trademark-web */
+
+
+@import './theme';
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+%fontStyle {
+  font-family: Arial, Helvetica, sans-serif;
+}
+textarea{
+  @extend %fontStyle;
+}
+body {
+  color: #606266;
+  min-width: 1280px;
+  overflow-x: auto;
+  background-color: #f8f8f8;
+  @extend %fontStyle;
+  .el-button {
+    @extend %fontStyle;
+  }
+  .el-date-editor .el-range-input {
+    @extend %fontStyle;
+    &::-webkit-input-placeholder{
+      @extend %fontStyle;
+    }
+  }
+  .el-input__inner {
+    @extend %fontStyle;
+    &::-webkit-input-placeholder{
+      @extend %fontStyle;
+    }
+  }
+}
+/* form 表单操作组件border样式 */
+$formBoxBorder: #cfd2d6;
+
+/* =============== element-ui样式重置 start ================ */
+
+.el-dialog {
+  margin: 5px auto;
+  border-radius: 6px;
+}
+.el-dialog__header {
+  padding: 16px 20px 10px 20px;
+  border-bottom: 1px solid #E4E7ED;
+  line-height: 24px; // fix在某些场景下继承了外层的line-height样式导致header的高度错误
+  background-color: rgba(247, 248, 250, 1);
+  border-radius: 6px 6px 0 0;
+}
+.el-dialog__title {
+  font-weight: 700;
+  color: #333333;
+  font-size: 16px;
+}
+.el-dialog__body {
+  padding : 30px 50px 30px 30px;
+}
+.el-dialog__footer {
+  padding-bottom: 10px;
+  border-top: 1px solid #E4E7ED;
+}
+.el-message {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.el-message--info {
+  background-color: #fff;
+}
+
+.el-table thead {
+  color: #303133;
+  tr {
+    th {
+      font-weight: 500;
+      background: #fafafa;
+      .el-checkbox {
+        margin-left: 4px;
+      }
+    }
+  }
+}
+
+.el-select {
+  width: 100%;
+}
+.el-autocomplete {
+  width: 100%;
+}
+
+// 去掉menu菜单右边的border，避免切换黑白时有问题
+.el-menu {
+  border-right: none;
+}
+
+// 重置collapseheader双击后颜色，不要变成主色
+.el-collapse-item__header.focusing:focus:not(:hover) {
+  color: #303133;
+}
+
+.el-radio-button:focus:not(.is-focus):not(:active):not(.is-disabled) {
+  box-shadow: none;
+}
+.el-tabs__nav-wrap::after {
+  height: 1px;
+}
+.el-radio.is-bordered, .el-radio.is-bordered + .el-radio.is-bordered{
+  margin: 0;
+  margin-right:-1px;
+  position: relative;
+  margin-bottom: 6px;
+}
+.el-radio.is-bordered.is-checked{
+  z-index : 1;
+}
+.el-radio.is-bordered {
+  border: 1px solid $formBoxBorder;
+}
+.el-checkbox.is-bordered, .el-checkbox.is-bordered + .el-checkbox.is-bordered {
+  margin: 0;
+  margin-right:-1px;
+  position: relative;
+  margin-bottom: 6px;
+}
+.el-checkbox.is-bordered.is-checked{
+  z-index : 1;
+}
+// tooltip设置最大宽度
+.el-tooltip__popper {
+  max-width: 600px;
+  line-height: 1.5;
+}
+.required-sign .el-form-item__label::before{
+  content: "*";
+  color: #f56c6c;
+  margin-right: 4px;
+}
+// el-dialog
+.dialog-setting-auth {
+  margin-top: 5vh !important;
+}
+.dialog-setting-auth .el-dialog__body {
+  height: 660px;
+  overflow: auto;
+  padding: 30px 50px;
+}
+/* =============== element-ui样式重置 end ================== */
+
+/* ==================== 全局样式 start ===================== */
+/* 所有全局样式都放在这里，约定以g-作为前缀                      */
+
+.g-page-tab > .el-tabs__header .el-tabs__item {
+  font-size: 20px;
+}
+
+.g-page-view {
+  box-sizing: border-box;
+  padding: 20px;
+  background: #fff;
+  min-height: calc(100vh - 90px); // header-height50px, padding20px * 2
+}
+
+.g-disabled {
+  color: #C0C4CC;
+  cursor: not-allowed !important;
+}
+.el-input__inner,
+.el-input.is-disabled .el-input__inner,
+.el-textarea__inner {
+  border: 1px solid $formBoxBorder;
+  color: #303133;
+}
+// focus
+.el-form-item.is-success .el-input__inner,
+.el-form-item.is-success .el-input__inner:focus,
+.el-form-item.is-success .el-textarea__inner,
+.el-form-item.is-success .el-textarea__inner:focus {
+  border-color: $formBoxBorder;
+}
+// 表格表头换行问题
+.el-table th > .cell {
+  word-break: break-word;
+}
+
+.el-popover {
+  word-break: break-word;
+}
+
+svg {
+  width: auto;
+  height: 1em; /* 取任意其它字体大小相对值 */
+  /* 要在 Safari 中正常工作，需要再引入如下两行代码 */
+  max-width: 100%;
+  max-height: 100%;
+}
+.add-btn {
+  // width: 73px;
+  // height: 35px;
+  // margin-bottom: 14px;
+  // border-radius: 3px;
+}
+
+/* ==================== 全局样式 end ===================== */

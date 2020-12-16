@@ -1,0 +1,80 @@
+{
+  "name": "patent-cloud-corp-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "cross-env VUE_APP_PUBLISH=test vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "before-push:build": "npm run build",
+    "before-push:test": "npm run test",
+    "build:dev": "cross-env vue-cli-service build",
+    "build:prod": "cross-env VUE_APP_PUBLISH=production vue-cli-service build",
+    "test": "vue-cli-service test:unit --collect-coverage",
+    "test:watch": "vue-cli-service test:unit --watch"
+  },
+  "dependencies": {
+    "@tencent/eslint-config-tencent": "^0.7.2",
+    "@vue/composition-api": "^1.0.0-beta.13",
+    "axios": "^0.20.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "core-js": "^3.6.5",
+    "cross-env": "^7.0.2",
+    "dayjs": "^1.8.36",
+    "element-ui": "^2.13.2",
+    "husky": "^4.3.0",
+    "lodash": "^4.17.20",
+    "mockjs": "^1.1.0",
+    "nanoid": "^2.1.9",
+    "sortablejs": "^1.12.0",
+    "svg-to-vue-component": "^0.3.8",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
+    "vuedraggable": "^2.24.1",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.19",
+    "@types/lodash": "^4.14.161",
+    "@types/mockjs": "^1.0.3",
+    "@types/sortablejs": "^1.10.6",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "@vue/cli-plugin-babel": "^4.5.8",
+    "@vue/cli-plugin-eslint": "^4.5.8",
+    "@vue/cli-plugin-router": "^4.5.8",
+    "@vue/cli-plugin-typescript": "^4.5.8",
+    "@vue/cli-plugin-unit-jest": "^4.5.8",
+    "@vue/cli-plugin-vuex": "^4.5.8",
+    "@vue/cli-service": "^4.5.8",
+    "@vue/eslint-config-airbnb": "^5.0.2",
+    "@vue/eslint-config-typescript": "^5.0.2",
+    "@vue/test-utils": "^1.0.3",
+    "babel-plugin-component": "^1.1.1",
+    "eslint": "^6.7.2",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "fibers": "^5.0.0",
+    "lint-staged": "^9.5.0",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "sass-loader": "^10.0.5",
+    "typescript": "~3.9.3",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "run-s before-push:*"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}

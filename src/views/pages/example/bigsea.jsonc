@@ -1,0 +1,39 @@
+{
+    "id": 6, //账单ID
+    "feeItemId": 0, //费用项目ID
+    "patentCaseNumber": "", //专利案号
+    "applicationType": "", //申请类型
+    "applicationTypeName": "", //申请类型名称
+    "regionCode": "", //国家/地区
+    "patentType": "", //专利类型
+    "category": "账单初核测试费用", //费用类目
+    "feeName": "初核费用", //费用名称
+    "outAccountState": 0, //出账状态
+    "initialAuditState": 0, //初核状态
+    "checkState": 0, //复核状态
+    "payState": 0, //支付状态
+    "remark": "账单初核测试", //账单备注
+    "officialFee": 1, // 官费费用
+    "officialFeeUnit": 6701, //官费币种
+    "officialStandardType": 6601, //费用标准类型：固定值
+    "agencyFee": 12, //本所代理费费用
+    "agencyFeeUnit": 6701, //本所代理费 币种
+    "agencyFeeStandardType": 6601, //费用标准类型:固定值
+    "agencysFee": 11, //外所代理费费用
+    "agencysFeeUnit": 6701, //外所代理费币种
+    "agencysFeeStandardType": 6601, //费用标准类型:固定值
+    "createdAtUtc": "0001-01-01T00:00:00Z",
+    "createdBy": "",
+    "updatedAtUtc": "0001-01-01T00:00:00Z",
+    "updatedBy": "",
+    "feeCategoryId": 27, //费用类目ID
+    "feeNameId": 116, // 费用名称ID
+    "progressId": 1817, //专利进程ID
+    "processStageName": "发起申请", //阶段 
+    "stageStepName": "填写申请单", // 步骤
+    "submitAt": "0001-01-01T00:00:00Z", // 提交ID
+    "lawFirmName": "", //代理所名称
+    "number": " 1-202011-1", // 批次号
+    "currency": 0, // 请款币种
+    "billItems": null //账单费用项
+}

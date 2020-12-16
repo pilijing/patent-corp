@@ -1,0 +1,72 @@
+import { StepResultSetting } from './step-result-setting';
+
+export type StepPropertyField = {
+  cascadedById: number | null; // null;
+  cascadedValues: string | null; // 'string';
+  defaultValueCriteria: string | null; // 'string';
+  defaultValueName: string; // 'string';
+  englishName: string; //  'test3';
+  id: number | null; // 0;
+  inputType: number | null; // string; // 'string'; // todo?
+  attachmentType: number|null;
+  isReadonly: boolean | null; // true;
+  isRequired: boolean | null; // true;
+  isVisible: boolean | null; // true;
+  name: string; // 'test3';
+  stageStepId: number | null; //  110;
+  syncToPatentField: number | null; // null;
+  syncToStageField: number | null; //  null;
+  syncToStepBodyField: number | null; //  null;
+  syncToStageBodyField: number | null; // ''; // 更新阶段主体字段值
+  priority: number;
+  cascadedDisplayType: number; // null;
+  cascadedValuesName: string; // '';
+  copyPatentField: number | null; // null;
+  copyStepField: number | null; // null;
+  defaultDisplayType: string; // 'staff';
+  defaultValueType: number | null; // null;
+  displayType: string; // '';
+  isStepResultField: boolean; // false;
+};
+
+export type StepDetail = {
+  id: number;
+  englishName: string;
+  eventResultType: number;
+  feeNameId: number;
+  focusType: number;
+  hasBill: false;
+  legalTimeType: number;
+  name: string;
+  notifyToType: number;
+  ownerType: number;
+  priority: number;
+  processId: number;
+  processStageId: number;
+  stepType: number;
+  todoBelongType: number[];
+  createdAtUtc: string;
+  createdBy: string;
+  updatedAtUtc: string;
+  updatedBy: string;
+  workingTimeType: number;
+  ownerStaffId: number;
+  ownerFullName: string;
+  todoBelongStaffId: number;
+  todoBelongFullName: string;
+  notifyStaffId: number;
+  notifyFullName: string;
+  ownerRoleId: number;
+  todoBelongRoleId: number;
+  notifyRoleId: number;
+  hasBelong: false;
+  hasNotifyType: false;
+  workingTimeOperate: number;
+  legalTimeOperate: number;
+  legalTimeNum: number;
+  workingTimeNum: number;
+  workingFieldDate: number;
+  legalFieldDate: number;
+  stageStepFields: StepPropertyField[];
+  stepResultSetting: StepResultSetting;
+};
